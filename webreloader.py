@@ -1,6 +1,11 @@
 import requests
 import time
-
+def main():
+    url = input("Enter the URL: ")
+    count = int(input("How many times do you want to reload? "))
+    delay = int(input("Enter the delay(s): "))
+    reload_url(url, count, delay)
+    
 def reload_url(url, count, delay):
     try:
         for i in range(count):
@@ -11,7 +16,5 @@ def reload_url(url, count, delay):
         print(f"Error: {e}")
 
 if __name__ == "__main__":
-    url = input("Enter the URL: ")
-    count = int(input("How many times do you want to reload? "))
-    delay = int(input("Enter the delay(s): "))
-    reload_url(url, count, delay)
+    main()
+    
